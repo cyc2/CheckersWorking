@@ -9,7 +9,7 @@
 import UIKit
 
 class GridLabel: UILabel {
-
-var canTap = true
-
+    
+    var canTap = true
+    
 }
