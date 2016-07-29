@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		241248191D4BD52C00675945 /* GridLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 241248181D4BD52C00675945 /* GridLabel.swift */; };
 		24A97D9A1D4BBD720080E094 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A97D991D4BBD720080E094 /* AppDelegate.swift */; };
 		24A97D9C1D4BBD720080E094 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A97D9B1D4BBD720080E094 /* ViewController.swift */; };
 		24A97D9F1D4BBD720080E094 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24A97D9D1D4BBD720080E094 /* Main.storyboard */; };
@@ -34,6 +35,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		241248181D4BD52C00675945 /* GridLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GridLabel.swift; path = ../GridLabel.swift; sourceTree = "<group>"; };
 		24A97D961D4BBD720080E094 /* Checkers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Checkers.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		24A97D991D4BBD720080E094 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		24A97D9B1D4BBD720080E094 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -99,6 +101,7 @@
 			children = (
 				24A97D991D4BBD720080E094 /* AppDelegate.swift */,
 				24A97D9B1D4BBD720080E094 /* ViewController.swift */,
+				241248181D4BD52C00675945 /* GridLabel.swift */,
 				24A97D9D1D4BBD720080E094 /* Main.storyboard */,
 				24A97DA01D4BBD720080E094 /* Assets.xcassets */,
 				24A97DA21D4BBD720080E094 /* LaunchScreen.storyboard */,
@@ -256,6 +259,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				241248191D4BD52C00675945 /* GridLabel.swift in Sources */,
 				24A97D9C1D4BBD720080E094 /* ViewController.swift in Sources */,
 				24A97D9A1D4BBD720080E094 /* AppDelegate.swift in Sources */,
 			);
@@ -484,6 +488,7 @@
 				24A97DC01D4BBD730080E094 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		24A97DC11D4BBD730080E094 /* Build configuration list for PBXNativeTarget "CheckersTests" */ = {
 			isa = XCConfigurationList;
@@ -492,6 +497,7 @@
 				24A97DC31D4BBD730080E094 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		24A97DC41D4BBD730080E094 /* Build configuration list for PBXNativeTarget "CheckersUITests" */ = {
 			isa = XCConfigurationList;
@@ -500,6 +506,7 @@
 				24A97DC61D4BBD730080E094 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
