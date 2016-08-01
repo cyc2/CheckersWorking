@@ -49,11 +49,12 @@ class ViewController: UIViewController {
     
     var blackCheckerCount = 12
     var redCheckerCount = 12
-    var king = false
     var blackTurn = true
     
     var redCheckers = [UIView]()
     var blackCheckers = [UIView]()
+    
+    var jumpLimiter = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -81,6 +82,9 @@ class ViewController: UIViewController {
                         }
                     } else if label.inactive {
                         label.eaten = true
+                        if label.eaten == true {
+                            print("eaten is true 1")
+                        }
                         for label in squaresArray {
                             if label.moving == true {
                                 label.piece = true
@@ -106,6 +110,9 @@ class ViewController: UIViewController {
                         }
                     } else if label.inactive {
                         label.eaten = true
+                        if label.eaten == true {
+                            print("eaten is true 2")
+                        }
                         for label in squaresArray {
                             if label.moving == true {
                                 label.piece = true
@@ -118,55 +125,56 @@ class ViewController: UIViewController {
             }
         }
     }
+    
     func startingBoard() {
-        GridLabel2.text = "O"
+        GridLabel2.text = "•"
         GridLabel2.textColor = UIColor.redColor()
-        GridLabel4.text = "O"
+        GridLabel4.text = "•"
         GridLabel4.textColor = UIColor.redColor()
-        GridLabel6.text = "O"
+        GridLabel6.text = "•"
         GridLabel6.textColor = UIColor.redColor()
-        GridLabel8.text = "O"
+        GridLabel8.text = "•"
         GridLabel8.textColor = UIColor.redColor()
-        GridLabel9.text = "O"
+        GridLabel9.text = "•"
         GridLabel9.textColor = UIColor.redColor()
-        GridLabel11.text = "O"
+        GridLabel11.text = "•"
         GridLabel11.textColor = UIColor.redColor()
-        GridLabel13.text = "O"
+        GridLabel13.text = "•"
         GridLabel13.textColor = UIColor.redColor()
-        GridLabel15.text = "O"
+        GridLabel15.text = "•"
         GridLabel15.textColor = UIColor.redColor()
-        GridLabel18.text = "O"
+        GridLabel18.text = "•"
         GridLabel18.textColor = UIColor.redColor()
-        GridLabel20.text = "O"
+        GridLabel20.text = "•"
         GridLabel20.textColor = UIColor.redColor()
-        GridLabel22.text = "O"
+        GridLabel22.text = "•"
         GridLabel22.textColor = UIColor.redColor()
-        GridLabel24.text = "O"
+        GridLabel24.text = "•"
         GridLabel24.textColor = UIColor.redColor()
         
-        GridLabel41.text = "O"
+        GridLabel41.text = "•"
         GridLabel41.textColor = UIColor.blackColor()
-        GridLabel43.text = "O"
+        GridLabel43.text = "•"
         GridLabel43.textColor = UIColor.blackColor()
-        GridLabel45.text = "O"
+        GridLabel45.text = "•"
         GridLabel45.textColor = UIColor.blackColor()
-        GridLabel47.text = "O"
+        GridLabel47.text = "•"
         GridLabel47.textColor = UIColor.blackColor()
-        GridLabel50.text = "O"
+        GridLabel50.text = "•"
         GridLabel50.textColor = UIColor.blackColor()
-        GridLabel52.text = "O"
+        GridLabel52.text = "•"
         GridLabel52.textColor = UIColor.blackColor()
-        GridLabel54.text = "O"
+        GridLabel54.text = "•"
         GridLabel54.textColor = UIColor.blackColor()
-        GridLabel56.text = "O"
+        GridLabel56.text = "•"
         GridLabel56.textColor = UIColor.blackColor()
-        GridLabel57.text = "O"
+        GridLabel57.text = "•"
         GridLabel57.textColor = UIColor.blackColor()
-        GridLabel59.text = "O"
+        GridLabel59.text = "•"
         GridLabel59.textColor = UIColor.blackColor()
-        GridLabel61.text = "O"
+        GridLabel61.text = "•"
         GridLabel61.textColor = UIColor.blackColor()
-        GridLabel63.text = "O"
+        GridLabel63.text = "•"
         GridLabel63.textColor = UIColor.blackColor()
     }
     func openSquareChecker() {
@@ -177,7 +185,7 @@ class ViewController: UIViewController {
                 label.moving = false
                 label.selected = false
             }
-            if label.text == "O" {
+            if label.text == "•" {
                 label.piece = true
                 label.openSquare = false
                 label.inactive = false
@@ -185,14 +193,14 @@ class ViewController: UIViewController {
                 label.destination = false
             }
             if blackTurn == true {
-                if label.text == "O" && label.textColor == UIColor.redColor() {
+                if label.text == "•" && label.textColor == UIColor.redColor() {
                     label.inactive = true
                     label.piece = false
                     label.moving = false
                     label.selected = false
                 }
-            } else if blackTurn == false{
-                if label.text == "O" && label.textColor == UIColor.blackColor() {
+            } else if blackTurn == false {
+                if label.text == "•" && label.textColor == UIColor.blackColor() {
                     label.inactive = true
                     label.piece = false
                     label.moving = false
@@ -215,7 +223,7 @@ class ViewController: UIViewController {
                         label.selected = false
                     }
                     if label.destination == true {
-                        label.text = "O"
+                        label.text = "•"
                         label.textColor = UIColor.blackColor()
                         openSquareChecker()
                         blackTurn = !blackTurn
@@ -236,7 +244,7 @@ class ViewController: UIViewController {
                         label.selected = false
                     }
                     if label.destination == true {
-                        label.text = "O"
+                        label.text = "•"
                         label.textColor = UIColor.redColor()
                         openSquareChecker()
                         blackTurn = !blackTurn
@@ -246,42 +254,51 @@ class ViewController: UIViewController {
         }
     }
     func blackPiecesEat() {
+        print("Black eating")
         for label in squaresArray {
             if label.selected == true {
+                print("Test 1")
                 for label in squaresArray {
-                    if label.moving == true && label.textColor == UIColor.blackColor() {
+                    if label.moving == true {
                         label.text = ""
                         label.moving = false
-                        openSquareChecker()
+                        
+                        print("Test 2")
                     } else {
                         label.selected = false
+                        print("Test 3")
                     }
                     if label.eaten == true {
-                        label.text = "O"
+                        label.text = "•"
                         label.textColor = UIColor.blackColor()
                         openSquareChecker()
                         blackTurn = !blackTurn
+                        print("Test 4")
                     }
                 }
             }
         }
     }
     func redPiecesEat() {
+        print("Red eating")
         for label in squaresArray {
             if label.selected == true {
+                print("Test 1")
                 for label in squaresArray {
-                    if label.moving == true && label.textColor == UIColor.redColor() {
+                    if label.moving == true {
                         label.text = ""
                         label.moving = false
-                        openSquareChecker()
+                        print("Test 2")
                     } else {
                         label.selected = false
+                        print("Test 3")
                     }
                     if label.eaten == true {
-                        label.text = "O"
+                        label.text = "•"
                         label.textColor = UIColor.redColor()
                         openSquareChecker()
                         blackTurn = !blackTurn
+                        print("Test 4")
                     }
                 }
             }
