@@ -12,8 +12,11 @@ class GridLabel: UILabel {
     
     var piece = false
     var openSquare = false
+    var inactive = false
     var moving = false
     var destination = false
+    var eaten = false
     var selected = false
-
+    
+    
 }

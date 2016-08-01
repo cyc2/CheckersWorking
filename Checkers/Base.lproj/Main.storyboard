@@ -23,209 +23,6 @@
                                     <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VOO-FM-eet">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="320"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9S5-Gd-2mH" customClass="GridLabel" customModule="Checkers" customModuleProvider="target">
-                                                <rect key="frame" x="40" y="41" width="40" height="40"/>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <color key="textColor" red="1" green="0.089913671397944706" blue="0.13652687187588586" alpha="1" colorSpace="calibratedRGB"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" tag="3" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BrB-TP-G2O" customClass="GridLabel" customModule="Checkers" customModuleProvider="target">
-                                                <rect key="frame" x="82" y="0.0" width="40" height="40"/>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <color key="textColor" red="1" green="0.089913671397944706" blue="0.13652687187588586" alpha="1" colorSpace="calibratedRGB"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wkf-FQ-pEq" customClass="GridLabel" customModule="Checkers" customModuleProvider="target">
-                                                <rect key="frame" x="121" y="42" width="40" height="40"/>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <color key="textColor" red="1" green="0.089913671397944706" blue="0.13652687187588586" alpha="1" colorSpace="calibratedRGB"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lhr-jH-oO6" customClass="GridLabel" customModule="Checkers" customModuleProvider="target">
-                                                <rect key="frame" x="161" y="1" width="40" height="40"/>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <color key="textColor" red="1" green="0.089913671397944706" blue="0.13652687187588586" alpha="1" colorSpace="calibratedRGB"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rzn-9w-LX6" customClass="GridLabel" customModule="Checkers" customModuleProvider="target">
-                                                <rect key="frame" x="201" y="42" width="40" height="40"/>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <color key="textColor" red="1" green="0.089913671397944706" blue="0.13652687187588586" alpha="1" colorSpace="calibratedRGB"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SMB-Ft-Zjk" customClass="GridLabel" customModule="Checkers" customModuleProvider="target">
-                                                <rect key="frame" x="241" y="1" width="40" height="40"/>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <color key="textColor" red="1" green="0.089913671397944706" blue="0.13652687187588586" alpha="1" colorSpace="calibratedRGB"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B7P-uK-7h4" customClass="GridLabel" customModule="Checkers" customModuleProvider="target">
-                                                <rect key="frame" x="280" y="41" width="40" height="40"/>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <color key="textColor" red="1" green="0.089913671397944706" blue="0.13652687187588586" alpha="1" colorSpace="calibratedRGB"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ps7-T3-FoQ" customClass="GridLabel" customModule="Checkers" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="82" width="40" height="40"/>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <color key="textColor" red="1" green="0.089913671397944706" blue="0.13652687187588586" alpha="1" colorSpace="calibratedRGB"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ctt-nz-CtD" customClass="GridLabel" customModule="Checkers" customModuleProvider="target">
-                                                <rect key="frame" x="40" y="123" width="40" height="40"/>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <color key="textColor" red="1" green="0.089913671397944706" blue="0.13652687187588586" alpha="1" colorSpace="calibratedRGB"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Iuk-Wb-hQ6" customClass="GridLabel" customModule="Checkers" customModuleProvider="target">
-                                                <rect key="frame" x="81" y="82" width="40" height="40"/>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <color key="textColor" red="1" green="0.089913671397944706" blue="0.13652687187588586" alpha="1" colorSpace="calibratedRGB"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tnX-QG-Leg" customClass="GridLabel" customModule="Checkers" customModuleProvider="target">
-                                                <rect key="frame" x="121" y="122" width="40" height="40"/>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <color key="textColor" red="1" green="0.089913671397944706" blue="0.13652687187588586" alpha="1" colorSpace="calibratedRGB"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nI4-OI-PqE" customClass="GridLabel" customModule="Checkers" customModuleProvider="target">
-                                                <rect key="frame" x="161" y="82" width="40" height="40"/>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <color key="textColor" red="1" green="0.089913671397944706" blue="0.13652687187588586" alpha="1" colorSpace="calibratedRGB"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RzU-f8-fiN" customClass="GridLabel" customModule="Checkers" customModuleProvider="target">
-                                                <rect key="frame" x="201" y="122" width="40" height="40"/>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <color key="textColor" red="1" green="0.089913671397944706" blue="0.13652687187588586" alpha="1" colorSpace="calibratedRGB"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="idP-Ed-kq7" customClass="GridLabel" customModule="Checkers" customModuleProvider="target">
-                                                <rect key="frame" x="241" y="82" width="40" height="40"/>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <color key="textColor" red="1" green="0.089913671397944706" blue="0.13652687187588586" alpha="1" colorSpace="calibratedRGB"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eum-hA-8YX" customClass="GridLabel" customModule="Checkers" customModuleProvider="target">
-                                                <rect key="frame" x="280" y="121" width="40" height="40"/>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <color key="textColor" red="1" green="0.089913671397944706" blue="0.13652687187588586" alpha="1" colorSpace="calibratedRGB"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kf4-Gy-lJb" customClass="GridLabel" customModule="Checkers" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="162" width="40" height="40"/>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <color key="textColor" red="1" green="0.089913671397944706" blue="0.13652687187588586" alpha="1" colorSpace="calibratedRGB"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7te-lM-0Eg" customClass="GridLabel" customModule="Checkers" customModuleProvider="target">
-                                                <rect key="frame" x="40" y="201" width="40" height="40"/>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <color key="textColor" red="1" green="0.089913671397944706" blue="0.13652687187588586" alpha="1" colorSpace="calibratedRGB"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tEn-6b-reN" customClass="GridLabel" customModule="Checkers" customModuleProvider="target">
-                                                <rect key="frame" x="81" y="163" width="40" height="40"/>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <color key="textColor" red="1" green="0.089913671397944706" blue="0.13652687187588586" alpha="1" colorSpace="calibratedRGB"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Ux-I5-ZQB" customClass="GridLabel" customModule="Checkers" customModuleProvider="target">
-                                                <rect key="frame" x="121" y="201" width="40" height="40"/>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <color key="textColor" red="1" green="0.089913671397944706" blue="0.13652687187588586" alpha="1" colorSpace="calibratedRGB"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eqs-1c-hlD" customClass="GridLabel" customModule="Checkers" customModuleProvider="target">
-                                                <rect key="frame" x="161" y="162" width="40" height="40"/>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <color key="textColor" red="1" green="0.089913671397944706" blue="0.13652687187588586" alpha="1" colorSpace="calibratedRGB"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JBa-OG-s7Q" customClass="GridLabel" customModule="Checkers" customModuleProvider="target">
-                                                <rect key="frame" x="201" y="200" width="40" height="40"/>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <color key="textColor" red="1" green="0.089913671397944706" blue="0.13652687187588586" alpha="1" colorSpace="calibratedRGB"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GTL-b5-UIg" customClass="GridLabel" customModule="Checkers" customModuleProvider="target">
-                                                <rect key="frame" x="241" y="161" width="40" height="40"/>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <color key="textColor" red="1" green="0.089913671397944706" blue="0.13652687187588586" alpha="1" colorSpace="calibratedRGB"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1al-O3-LVd" customClass="GridLabel" customModule="Checkers" customModuleProvider="target">
-                                                <rect key="frame" x="280" y="199" width="40" height="40"/>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <color key="textColor" red="1" green="0.089913671397944706" blue="0.13652687187588586" alpha="1" colorSpace="calibratedRGB"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JVm-L9-8th" customClass="GridLabel" customModule="Checkers" customModuleProvider="target">
-                                                <rect key="frame" x="40" y="279" width="40" height="40"/>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <color key="textColor" red="1" green="0.089913671397944706" blue="0.13652687187588586" alpha="1" colorSpace="calibratedRGB"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HIJ-3M-3yw" customClass="GridLabel" customModule="Checkers" customModuleProvider="target">
-                                                <rect key="frame" x="81" y="242" width="40" height="40"/>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <color key="textColor" red="1" green="0.089913671397944706" blue="0.13652687187588586" alpha="1" colorSpace="calibratedRGB"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WWK-oQ-b4T" customClass="GridLabel" customModule="Checkers" customModuleProvider="target">
-                                                <rect key="frame" x="121" y="278" width="40" height="40"/>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <color key="textColor" red="1" green="0.089913671397944706" blue="0.13652687187588586" alpha="1" colorSpace="calibratedRGB"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fyw-rC-sj4" customClass="GridLabel" customModule="Checkers" customModuleProvider="target">
-                                                <rect key="frame" x="161" y="241" width="40" height="40"/>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <color key="textColor" red="1" green="0.089913671397944706" blue="0.13652687187588586" alpha="1" colorSpace="calibratedRGB"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gxd-Zi-XGq" customClass="GridLabel" customModule="Checkers" customModuleProvider="target">
-                                                <rect key="frame" x="241" y="239" width="40" height="40"/>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <color key="textColor" red="1" green="0.089913671397944706" blue="0.13652687187588586" alpha="1" colorSpace="calibratedRGB"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fES-Ra-XDG" customClass="GridLabel" customModule="Checkers" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <color key="textColor" red="1" green="0.089913671397944706" blue="0.13652687187588586" alpha="1" colorSpace="calibratedRGB"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Crc-W0-Aju" customClass="GridLabel" customModule="Checkers" customModuleProvider="target">
                                                 <rect key="frame" x="241" y="121" width="40" height="40"/>
                                                 <color key="backgroundColor" red="0.46582532051282055" green="0.46582532051282055" blue="0.46582532051282055" alpha="1" colorSpace="calibratedRGB"/>
@@ -266,13 +63,6 @@
                                                 <color key="backgroundColor" red="0.46582532051282055" green="0.46582532051282055" blue="0.46582532051282055" alpha="1" colorSpace="calibratedRGB"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LSY-SR-40h" customClass="GridLabel" customModule="Checkers" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="241" width="40" height="40"/>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <color key="textColor" red="1" green="0.089913671397944706" blue="0.13652687187588586" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AhF-SQ-xRG" customClass="GridLabel" customModule="Checkers" customModuleProvider="target">
@@ -450,20 +240,6 @@
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZZI-SL-7Py" customClass="GridLabel" customModule="Checkers" customModuleProvider="target">
-                                                <rect key="frame" x="201" y="279" width="40" height="40"/>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <color key="textColor" red="1" green="0.089913671397944706" blue="0.13652687187588586" alpha="1" colorSpace="calibratedRGB"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bXY-aT-t6G" customClass="GridLabel" customModule="Checkers" customModuleProvider="target">
-                                                <rect key="frame" x="280" y="278" width="40" height="40"/>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <color key="textColor" red="1" green="0.089913671397944706" blue="0.13652687187588586" alpha="1" colorSpace="calibratedRGB"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BfD-8l-NSo" customClass="GridLabel" customModule="Checkers" customModuleProvider="target">
                                                 <rect key="frame" x="241" y="279" width="40" height="40"/>
                                                 <color key="backgroundColor" red="0.46582532051282055" green="0.46582532051282055" blue="0.46582532051282055" alpha="1" colorSpace="calibratedRGB"/>
@@ -472,7 +248,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
-                                        <color key="backgroundColor" red="0.46582532049999997" green="0.46582532049999997" blue="0.46582532049999997" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <connections>
                                             <outletCollection property="gestureRecognizers" destination="uke-2U-a8S" appends="YES" id="AFM-ud-5il"/>
                                         </connections>
@@ -486,68 +262,36 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
                     <connections>
                         <outlet property="BackgroundView" destination="VOO-FM-eet" id="C3S-kQ-FMB"/>
-                        <outlet property="GridLabel1" destination="fES-Ra-XDG" id="i1f-jh-ygt"/>
-                        <outlet property="GridLabel10" destination="9S5-Gd-2mH" id="GV2-qr-LPz"/>
                         <outlet property="GridLabel11" destination="vqO-1X-MDW" id="OEL-IO-bqU"/>
-                        <outlet property="GridLabel12" destination="Wkf-FQ-pEq" id="iQ5-vC-tSw"/>
                         <outlet property="GridLabel13" destination="Gto-aX-gmY" id="WKu-pS-zB4"/>
-                        <outlet property="GridLabel14" destination="rzn-9w-LX6" id="NXF-gd-BgB"/>
                         <outlet property="GridLabel15" destination="ekw-oQ-YOz" id="ApX-Qr-ah1"/>
-                        <outlet property="GridLabel16" destination="B7P-uK-7h4" id="pFZ-5f-sPs"/>
-                        <outlet property="GridLabel17" destination="ps7-T3-FoQ" id="NnD-wp-sEW"/>
                         <outlet property="GridLabel18" destination="AhF-SQ-xRG" id="77K-pe-Cfh"/>
-                        <outlet property="GridLabel19" destination="Iuk-Wb-hQ6" id="ckB-y9-bcT"/>
                         <outlet property="GridLabel2" destination="Wf0-Hs-9bx" id="uwT-gf-lUg"/>
                         <outlet property="GridLabel20" destination="cEV-3V-9B2" id="9xU-Ug-QQm"/>
-                        <outlet property="GridLabel21" destination="nI4-OI-PqE" id="PKe-rB-u6y"/>
                         <outlet property="GridLabel22" destination="KRB-vh-hTj" id="lno-Or-QnW"/>
-                        <outlet property="GridLabel23" destination="idP-Ed-kq7" id="qe4-NL-Iyz"/>
                         <outlet property="GridLabel24" destination="hj9-jt-n3Q" id="az5-JO-Kfh"/>
                         <outlet property="GridLabel25" destination="mlW-zA-rve" id="fNz-7k-b69"/>
-                        <outlet property="GridLabel26" destination="ctt-nz-CtD" id="iib-aB-Pvg"/>
                         <outlet property="GridLabel27" destination="b4M-ln-LZc" id="BD3-eK-f1K"/>
-                        <outlet property="GridLabel28" destination="tnX-QG-Leg" id="bMz-CQ-DsQ"/>
                         <outlet property="GridLabel29" destination="MfL-3z-rSb" id="t0H-xx-x68"/>
-                        <outlet property="GridLabel3" destination="BrB-TP-G2O" id="g78-AG-Q4f"/>
-                        <outlet property="GridLabel30" destination="RzU-f8-fiN" id="qKp-f0-9r3"/>
                         <outlet property="GridLabel31" destination="Crc-W0-Aju" id="dwX-LX-cZS"/>
-                        <outlet property="GridLabel32" destination="eum-hA-8YX" id="S9D-hh-Ui0"/>
-                        <outlet property="GridLabel33" destination="kf4-Gy-lJb" id="xMu-qR-Cqj"/>
                         <outlet property="GridLabel34" destination="bU0-TF-3oh" id="IFd-U0-4EO"/>
-                        <outlet property="GridLabel35" destination="tEn-6b-reN" id="lKg-FZ-gy7"/>
                         <outlet property="GridLabel36" destination="JYa-Ev-xKQ" id="y2P-4l-GrK"/>
-                        <outlet property="GridLabel37" destination="eqs-1c-hlD" id="quj-Hz-QbL"/>
                         <outlet property="GridLabel38" destination="WVl-1E-t8Y" id="eLA-CT-tal"/>
-                        <outlet property="GridLabel39" destination="GTL-b5-UIg" id="SyX-Js-Oux"/>
                         <outlet property="GridLabel4" destination="NyI-pe-H5h" id="aXS-vI-omK"/>
                         <outlet property="GridLabel40" destination="oW7-in-AEk" id="orY-Zg-5qG"/>
                         <outlet property="GridLabel41" destination="9pa-0U-j4W" id="ESe-HC-8DX"/>
-                        <outlet property="GridLabel42" destination="7te-lM-0Eg" id="Ziv-hL-UDC"/>
                         <outlet property="GridLabel43" destination="tXw-qh-CXu" id="TJ1-zX-4iL"/>
-                        <outlet property="GridLabel44" destination="4Ux-I5-ZQB" id="Zyw-Qf-AoP"/>
                         <outlet property="GridLabel45" destination="xDJ-aW-seH" id="99o-cZ-Oux"/>
-                        <outlet property="GridLabel46" destination="JBa-OG-s7Q" id="4ht-GE-xrT"/>
                         <outlet property="GridLabel47" destination="TiL-LC-eOY" id="5vO-a0-Bl3"/>
-                        <outlet property="GridLabel48" destination="1al-O3-LVd" id="VbI-f2-7d4"/>
-                        <outlet property="GridLabel49" destination="LSY-SR-40h" id="9QP-Md-vNw"/>
-                        <outlet property="GridLabel5" destination="lhr-jH-oO6" id="r3E-tb-k3q"/>
                         <outlet property="GridLabel50" destination="LRT-iS-0ac" id="rcM-SS-AeC"/>
-                        <outlet property="GridLabel51" destination="HIJ-3M-3yw" id="gsM-5z-GXt"/>
                         <outlet property="GridLabel52" destination="Zkb-oq-YOB" id="6hh-U3-d2m"/>
-                        <outlet property="GridLabel53" destination="fyw-rC-sj4" id="9oR-aY-8AF"/>
                         <outlet property="GridLabel54" destination="k5h-Be-caC" id="S39-vB-g24"/>
-                        <outlet property="GridLabel55" destination="Gxd-Zi-XGq" id="YPY-VA-z6z"/>
                         <outlet property="GridLabel56" destination="GPR-FQ-XnN" id="qOp-Ld-Kcg"/>
                         <outlet property="GridLabel57" destination="pcf-sX-Cj8" id="ZMw-og-hDY"/>
-                        <outlet property="GridLabel58" destination="JVm-L9-8th" id="Liz-VI-2iM"/>
                         <outlet property="GridLabel59" destination="xBj-QS-PyA" id="ue8-hx-p6c"/>
                         <outlet property="GridLabel6" destination="zup-C6-p1C" id="Pnp-Vd-lHl"/>
-                        <outlet property="GridLabel60" destination="WWK-oQ-b4T" id="04S-ie-Rr3"/>
                         <outlet property="GridLabel61" destination="VZs-px-p6D" id="NX8-vj-lTb"/>
-                        <outlet property="GridLabel62" destination="ZZI-SL-7Py" id="vM3-7a-czM"/>
                         <outlet property="GridLabel63" destination="BfD-8l-NSo" id="3bl-gr-0Wo"/>
-                        <outlet property="GridLabel64" destination="bXY-aT-t6G" id="NVX-E4-GH9"/>
-                        <outlet property="GridLabel7" destination="SMB-Ft-Zjk" id="TK8-4C-cDx"/>
                         <outlet property="GridLabel8" destination="5lm-nN-h3b" id="YVZ-Je-zP1"/>
                         <outlet property="GridLabel9" destination="PaY-h1-Osl" id="bRO-JK-5mM"/>
                     </connections>
