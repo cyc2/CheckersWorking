@@ -81,21 +81,85 @@ class ViewController: UIViewController {
     var blackCheckerCount = 12
     var redCheckerCount = 12
     var king = false
+    var blackTurn = true
+    var pieceSelected = false
     
     var redCheckers = [UIView]()
     var blackCheckers = [UIView]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        squaresArray = [GridLabel1, GridLabel2, GridLabel3, GridLabel4, GridLabel5, GridLabel6, GridLabel7, GridLabel8, GridLabel9, GridLabel10, GridLabel11, GridLabel12, GridLabel13, GridLabel14,GridLabel15, GridLabel16, GridLabel17, GridLabel18, GridLabel19, GridLabel20, GridLabel21, GridLabel22, GridLabel23, GridLabel24, GridLabel25, GridLabel26, GridLabel27, GridLabel28, GridLabel29, GridLabel30, GridLabel31, GridLabel32, GridLabel33, GridLabel34, GridLabel35, GridLabel36, GridLabel37, GridLabel38, GridLabel39, GridLabel40, GridLabel41, GridLabel42, GridLabel43, GridLabel44, GridLabel45, GridLabel46, GridLabel47, GridLabel48, GridLabel49, GridLabel50, GridLabel51, GridLabel52, GridLabel53, GridLabel54, GridLabel55, GridLabel56, GridLabel57, GridLabel58, GridLabel59, GridLabel60, GridLabel61, GridLabel62, GridLabel63, GridLabel64]
+        startingBoard()
+        squaresArray = [GridLabel2, GridLabel4, GridLabel6, GridLabel8, GridLabel9, GridLabel11, GridLabel13, GridLabel15, GridLabel18, GridLabel20, GridLabel22, GridLabel24, GridLabel25, GridLabel27, GridLabel29, GridLabel31, GridLabel34, GridLabel36, GridLabel38, GridLabel40, GridLabel41, GridLabel43, GridLabel45, GridLabel47, GridLabel50, GridLabel52, GridLabel54, GridLabel56, GridLabel57, GridLabel59, GridLabel61, GridLabel63]
     }
     @IBAction func onTappedGridLabel(sender: UITapGestureRecognizer) {
         print("tapped gridLabel")
+        checkPieces()
         for label in squaresArray {
             if CGRectContainsPoint(label.frame, sender.locationInView(BackgroundView)) {
                 if (label.canTap) {
+                    if blackTurn == true {
+                        pieceSelected = true
+                        print(pieceSelected)
+                        label.wasTapped = true
+                    } else {
+                    }
+                } else {
+                    label.wasTapped = true
+                    label.canTap = true
+                    movePieces()
                 }
             }
+        }
+    }
+    func startingBoard() {
+        GridLabel2.text = "O"
+        GridLabel4.text = "O"
+        GridLabel6.text = "O"
+        GridLabel8.text = "O"
+        GridLabel9.text = "O"
+        GridLabel11.text = "O"
+        GridLabel13.text = "O"
+        GridLabel15.text = "O"
+        GridLabel18.text = "O"
+        GridLabel20.text = "O"
+        GridLabel22.text = "O"
+        GridLabel24.text = "O"
+        
+        GridLabel41.text = "O"
+        GridLabel43.text = "O"
+        GridLabel45.text = "O"
+        GridLabel47.text = "O"
+        GridLabel50.text = "O"
+        GridLabel52.text = "O"
+        GridLabel54.text = "O"
+        GridLabel56.text = "O"
+        GridLabel57.text = "O"
+        GridLabel59.text = "O"
+        GridLabel61.text = "O"
+        GridLabel63.text = "O"
+    }
+    func checkPieces() {
+        for label in squaresArray {
+            if label.text == "O" {
+                label.canTap = true
+            }
+            
+        }
+    }
+    func movePieces() {
+        if pieceSelected == true {
+            for label in squaresArray {
+                if label.wasTapped == true {
+                    label.text = "O"
+
+                    label.wasTapped = false
+                } else {
+                    pieceSelected = false
+                }
+            }
+        } else {
+            
         }
     }
 }

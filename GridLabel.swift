@@ -10,6 +10,8 @@ import UIKit
 
 class GridLabel: UILabel {
     
-    var canTap = true
+    var canTap = false
+    var wasTapped = false
+    
     
 }
