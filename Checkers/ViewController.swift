@@ -55,6 +55,7 @@ class ViewController: UIViewController {
     var blackCheckers = [UIView]()
     
     var jumpLimiter = 0
+    var win = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -274,6 +275,9 @@ class ViewController: UIViewController {
                         openSquareChecker()
                         blackTurn = !blackTurn
                         print("Test 4")
+                        redCheckerCount -= 1
+                        checkForWinner()
+                        resetGame()
                     }
                 }
             }
@@ -299,9 +303,41 @@ class ViewController: UIViewController {
                         openSquareChecker()
                         blackTurn = !blackTurn
                         print("Test 4")
+                        blackCheckerCount -= 1
+                        checkForWinner()
+                        resetGame()
                     }
                 }
             }
         }
+    }
+    func checkForWinner() {
+        if blackCheckerCount == 0 {
+            let alert = UIAlertController(title: "Red wins the Game!", message: nil, preferredStyle: .Alert)
+            alert.addAction(UIAlertAction(title: "Reset", style: .Default, handler: { (action) in
+            }))
+            presentViewController(alert, animated: true, completion: nil)
+            win = true
+        }
+        if redCheckerCount == 0 {
+            let alert = UIAlertController(title: "Black wins the Game!", message: nil, preferredStyle: .Alert)
+            alert.addAction(UIAlertAction(title: "Reset", style: .Default, handler: { (action) in
+            }))
+            presentViewController(alert, animated: true, completion: nil)
+            win = true
+        }
+    }
+    func resetGame() {
+        if win == true {
+            let alert = UIAlertController(title: "Are you sure you want to restart?", message: nil, preferredStyle: .Alert)
+            alert.addAction(UIAlertAction(title: "No", style: .Destructive, handler: nil))
+            alert.addAction(UIAlertAction(title: "Restart", style: .Default, handler: { (action) in
+                self.blackCheckerCount = 12
+                self.redCheckerCount = 12
+                self.startingBoard()
+            }))
+            presentViewController(alert, animated: true, completion: nil)
+        }
+        win = false
     }
 }
