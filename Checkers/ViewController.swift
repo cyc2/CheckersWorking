@@ -82,7 +82,6 @@ class ViewController: UIViewController {
     var redCheckerCount = 12
     var king = false
     var blackTurn = true
-    var pieceSelected = false
     
     var redCheckers = [UIView]()
     var blackCheckers = [UIView]()
@@ -94,20 +93,22 @@ class ViewController: UIViewController {
     }
     @IBAction func onTappedGridLabel(sender: UITapGestureRecognizer) {
         print("tapped gridLabel")
-        checkPieces()
+        openSquareChecker()
         for label in squaresArray {
             if CGRectContainsPoint(label.frame, sender.locationInView(BackgroundView)) {
-                if (label.canTap) {
-                    if blackTurn == true {
-                        pieceSelected = true
-                        print(pieceSelected)
-                        label.wasTapped = true
-                    } else {
+                if (label.piece) {
+                    if label.piece == true {
+                        label.selected = true
+                        label.moving = true
                     }
-                } else {
-                    label.wasTapped = true
-                    label.canTap = true
-                    movePieces()
+                } else if label.openSquare {
+                    label.destination = true
+                    for label in squaresArray {
+                        if label.moving == true {
+                            label.piece = true
+                            movePieces()
+                        }
+                    }
                 }
             }
         }
@@ -139,27 +140,40 @@ class ViewController: UIViewController {
         GridLabel61.text = "O"
         GridLabel63.text = "O"
     }
-    func checkPieces() {
+    func openSquareChecker() {
         for label in squaresArray {
-            if label.text == "O" {
-                label.canTap = true
+            if label.text == "" {
+                label.openSquare = true
+                label.piece = false
+                label.moving = false
+                label.selected = false
             }
-            
+            if label.text == "O" {
+                label.piece = true
+                label.openSquare = false
+                label.destination = false
+            }
         }
     }
     func movePieces() {
-        if pieceSelected == true {
-            for label in squaresArray {
-                if label.wasTapped == true {
-                    label.text = "O"
-
-                    label.wasTapped = false
-                } else {
-                    pieceSelected = false
+        for label in squaresArray {
+            if label.selected == true {
+                for label in squaresArray {
+                    if label.moving == true {
+                        label.text = ""
+                        label.moving = false
+                        openSquareChecker()
+                    } else {
+                        label.selected = false
+                    }
+                    if label.destination == true {
+                        label.text = "O"
+                        openSquareChecker()
+                    }
                 }
+            } else {
+                
             }
-        } else {
-            
         }
     }
 }
