@@ -65,6 +65,7 @@ class ViewController: UIViewController {
     }
     @IBAction func onTappedGridLabel(sender: UITapGestureRecognizer) {
         openSquareChecker()
+        notKingFunction()
         for label in squaresArray {
             if CGRectContainsPoint(label.frame, sender.locationInView(BackgroundView)) {
                 if blackTurn == true {
@@ -72,9 +73,11 @@ class ViewController: UIViewController {
                         if label.piece == true && label.inactive == false {
                             label.selected = true
                             label.moving = true
+                            notKingFunction()
                         }
                     } else if label.openSquare {
                         label.destination = true
+                        notKingFunction()
                         for label in squaresArray {
                             if label.moving == true {
                                 label.piece = true
@@ -100,9 +103,11 @@ class ViewController: UIViewController {
                         if label.piece == true && label.inactive == false {
                             label.selected = true
                             label.moving = true
+                            notKingFunction()
                         }
                     } else if label.openSquare {
                         label.destination = true
+                        notKingFunction()
                         for label in squaresArray {
                             if label.moving == true {
                                 label.piece = true
@@ -126,6 +131,7 @@ class ViewController: UIViewController {
                 }
             }
         }
+        notKingFunction()
     }
     
     func startingBoard() {
@@ -233,6 +239,7 @@ class ViewController: UIViewController {
                 }
             }
         }
+        resetLabelValues()
     }
     func moveRedPieces() {
         for label in squaresArray {
@@ -254,6 +261,7 @@ class ViewController: UIViewController {
                 }
             }
         }
+        resetLabelValues()
     }
     func blackPiecesEat() {
         print("Black eating")
@@ -264,7 +272,6 @@ class ViewController: UIViewController {
                     if label.moving == true {
                         label.text = ""
                         label.moving = false
-                        
                         print("Test 2")
                     } else {
                         label.selected = false
@@ -283,6 +290,7 @@ class ViewController: UIViewController {
                 }
             }
         }
+        resetLabelValues()
     }
     func redPiecesEat() {
         print("Red eating")
@@ -311,6 +319,7 @@ class ViewController: UIViewController {
                 }
             }
         }
+        resetLabelValues()
     }
     func checkForWinner() {
         if blackCheckerCount == 0 {
@@ -341,17 +350,49 @@ class ViewController: UIViewController {
         }
         win = false
     }
-    func kingFunction() {
-        var labelValue = 0
+    func notKingFunction() {
+        var mLabelValue = 0
+        var dLabelValue = 10
         for label in squaresArray {
             if label.moving == true {
-                if squaresArray.indexOf(label)! > labelValue {
-                    print("something")
-                    if label.destination == true {
-                        labelValue = squaresArray.indexOf(label)!
-                        
-                    }
+                mLabelValue = label.tag
             }
+            if label.destination == true {
+                dLabelValue = label.tag
+            }
+            if dLabelValue != 10 && mLabelValue != 0 {
+                //print(mLabelValue)
+                //print(dLabelValue)
+                //print(label.destination)
+                if mLabelValue < dLabelValue && blackTurn == true && label.destination == true {
+                    //print("Alert")
+                    //print("Who's turn?")
+                    //print(blackTurn)
+                    //print(mLabelValue)
+                    //print(dLabelValue)
+                }
+                if mLabelValue > dLabelValue && blackTurn == false && label.destination == false {
+                    //print("Alert")
+                    //print("Who's turn?")
+                    //print(blackTurn)
+                    //print(mLabelValue)
+                    //print(dLabelValue)
+                }
+            }
+        }
+
+    }
+    func resetLabelValues() {
+        for label in squaresArray {
+            label.piece = false
+            label.openSquare = false
+            label.inactive = false
+            label.moving = false
+            label.destination = false
+            label.eaten = false
+            label.selected = false
+            label.king = false
         }
     }
 }
+
