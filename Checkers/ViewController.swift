@@ -51,11 +51,8 @@ class ViewController: UIViewController {
     var redCheckerCount = 12
     var blackTurn = true
     
-    
-    var redCheckers = [UIView]()
-    var blackCheckers = [UIView]()
-    
     var jumpLimiter = 0
+    var invalidMove = false
     var win = false
     
     override func viewDidLoad() {
@@ -78,6 +75,9 @@ class ViewController: UIViewController {
                     } else if label.openSquare {
                         label.destination = true
                         notKingFunction()
+                        if invalidMove == true {
+                            break
+                        }
                         for label in squaresArray {
                             if label.moving == true {
                                 label.piece = true
@@ -108,6 +108,9 @@ class ViewController: UIViewController {
                     } else if label.openSquare {
                         label.destination = true
                         notKingFunction()
+                        if invalidMove == true {
+                            break
+                        }
                         for label in squaresArray {
                             if label.moving == true {
                                 label.piece = true
@@ -131,7 +134,6 @@ class ViewController: UIViewController {
                 }
             }
         }
-        notKingFunction()
     }
     
     func startingBoard() {
@@ -216,8 +218,8 @@ class ViewController: UIViewController {
                 }
                 
             }
-            
         }
+        invalidMove = false
     }
     func moveBlackPieces() {
         for label in squaresArray {
@@ -350,7 +352,7 @@ class ViewController: UIViewController {
         }
         win = false
     }
-    func notKingFunction() {
+    func notKingFunction() -> Bool {
         var mLabelValue = 0
         var dLabelValue = 10
         for label in squaresArray {
@@ -370,6 +372,7 @@ class ViewController: UIViewController {
                     //print(blackTurn)
                     //print(mLabelValue)
                     //print(dLabelValue)
+                    invalidMove = true
                 }
                 if mLabelValue > dLabelValue && blackTurn == false && label.destination == false {
                     //print("Alert")
@@ -377,10 +380,11 @@ class ViewController: UIViewController {
                     //print(blackTurn)
                     //print(mLabelValue)
                     //print(dLabelValue)
+                    invalidMove = true
                 }
             }
         }
-
+        return invalidMove
     }
     func resetLabelValues() {
         for label in squaresArray {
