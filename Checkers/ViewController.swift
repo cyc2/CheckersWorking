@@ -51,6 +51,7 @@ class ViewController: UIViewController {
     var redCheckerCount = 12
     var blackTurn = true
     
+    
     var redCheckers = [UIView]()
     var blackCheckers = [UIView]()
     
@@ -339,5 +340,18 @@ class ViewController: UIViewController {
             presentViewController(alert, animated: true, completion: nil)
         }
         win = false
+    }
+    func kingFunction() {
+        var labelValue = 0
+        for label in squaresArray {
+            if label.moving == true {
+                if squaresArray.indexOf(label)! > labelValue {
+                    print("something")
+                    if label.destination == true {
+                        labelValue = squaresArray.indexOf(label)!
+                        
+                    }
+            }
+        }
     }
 }

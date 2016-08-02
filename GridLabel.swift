@@ -19,5 +19,4 @@ class GridLabel: UILabel {
     var selected = false
     var king = false
     
-    
 }
