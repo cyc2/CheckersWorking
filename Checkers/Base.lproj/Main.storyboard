@@ -256,18 +256,18 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PGy-cS-LFt">
-                                <rect key="frame" x="107" y="485" width="200" height="50"/>
+                                <rect key="frame" x="107" y="543" width="200" height="50"/>
                                 <color key="backgroundColor" red="1" green="0.19951506660000001" blue="0.77088357330000001" alpha="0.14999999999999999" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="15"/>
                                 <state key="normal" title="End Turn">
-                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="0.25" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="onTappedJumpButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YnC-d1-ipe"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Status Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jp5-CZ-XDY">
-                                <rect key="frame" x="107" y="543" width="200" height="50"/>
+                                <rect key="frame" x="107" y="601" width="200" height="50"/>
                                 <color key="backgroundColor" red="1" green="0.19951506660000001" blue="0.77088357330000001" alpha="0.14999999999999999" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="15"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -280,7 +280,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Turn Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S3h-US-ka8">
-                                <rect key="frame" x="107" y="601" width="200" height="50"/>
+                                <rect key="frame" x="107" y="485" width="200" height="50"/>
                                 <color key="backgroundColor" red="1" green="0.19951506660000001" blue="0.77088357330000001" alpha="0.14999999999999999" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="15"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>

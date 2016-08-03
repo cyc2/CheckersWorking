@@ -66,6 +66,8 @@ class ViewController: UIViewController {
         jumpButton.enabled = false
         statusLabel.text = "Standard"
         turnLabel.text = "Black's Turn"
+        jumpButton.setTitleColor(UIColor.blackColor(), forState: .Normal)
+        jumpButton.setTitleColor(UIColor(white: 0, alpha: 0.2), forState: .Disabled)
     }
     @IBAction func onTappedGridLabel(sender: UITapGestureRecognizer) {
         invalidMove = false
