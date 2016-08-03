@@ -54,6 +54,8 @@ class ViewController: UIViewController {
     var jumpLimiter = 0
     var invalidMove = false
     var win = false
+    var mLabelIndex = 0
+    var previousMLabelIndex = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -269,17 +271,17 @@ class ViewController: UIViewController {
         resetLabelValues()
     }
     func blackPiecesEat() {
-        var mLabelIndex = 0
         if invalidMove == true {
             
         } else {
             for label in squaresArray {
                 if label.selected == true {
                     //print("Test 1")
-                    for label in squaresArray {
+                    for label in squaresArray.reverse() {
                         if label.moving == true {
                             label.text = ""
                             label.moving = false
+                            previousMLabelIndex = mLabelIndex
                             mLabelIndex = squaresArray.indexOf(label)!
                             //print(squaresArray.indexOf(label))
                             //print("Test 2")
@@ -293,12 +295,14 @@ class ViewController: UIViewController {
                             let labelIndex = squaresArray.indexOf(label)
                             //print(labelIndex)
                             let label2 = squaresArray[labelIndex! - 4]
-                            let label3 = squaresArray[labelIndex! - 6]
-                            if labelIndex == 0 {
+                            let label3 = squaresArray[labelIndex! - 5]
+                            print(mLabelIndex)
+                            print(labelIndex)
+                            if (mLabelIndex - labelIndex! == 3) {
                                 label2.text = "•"
                                 label2.textColor = UIColor.blackColor()
                             }
-                            if labelIndex == 0 {
+                            if (mLabelIndex - labelIndex! == 4) {
                                 label3.text = "•"
                                 label3.textColor = UIColor.blackColor()
                             }
@@ -316,7 +320,6 @@ class ViewController: UIViewController {
         resetLabelValues()
     }
     func redPiecesEat() {
-        var mLabelIndex = 0
         if invalidMove == true {
             
         } else {
@@ -327,6 +330,7 @@ class ViewController: UIViewController {
                         if label.moving == true {
                             label.text = ""
                             label.moving = false
+                            mLabelIndex = squaresArray.indexOf(label)!
                             //print("Test 2")
                         } else {
                             label.selected = false
@@ -337,12 +341,14 @@ class ViewController: UIViewController {
                             label.textColor = UIColor.redColor()
                             let labelIndex = squaresArray.indexOf(label)
                             let label2 = squaresArray[labelIndex! + 4]
-                            let label3 = squaresArray[labelIndex! + 6]
-                            if labelIndex == 0 {
+                            let label3 = squaresArray[labelIndex! + 5]
+                            print(mLabelIndex)
+                            print(labelIndex)
+                            if (labelIndex! - mLabelIndex == 3) {
                                 label2.text = "•"
                                 label2.textColor = UIColor.redColor()
                             }
-                            if labelIndex == 0 {
+                            if (labelIndex! - mLabelIndex == 4) {
                                 label3.text = "•"
                                 label3.textColor = UIColor.redColor()
                             }
@@ -399,11 +405,13 @@ class ViewController: UIViewController {
                 dLabelValue = label.tag
             }
             if dLabelValue != 10 && mLabelValue != 0 {
-                if mLabelValue < dLabelValue && blackTurn == true && label.destination == true {
+                if (mLabelValue < dLabelValue || mLabelValue - 1 > dLabelValue) && blackTurn == true && label.destination == true {
                     invalidMove = true
+                    print("Invalid")
                 }
-                if mLabelValue > dLabelValue && blackTurn == false && label.destination == false {
+                if (mLabelValue > dLabelValue || mLabelValue + 1 < dLabelValue) && blackTurn == false && label.destination == false {
                     invalidMove = true
+                    print("Invalid")
                 }
             }
         }
