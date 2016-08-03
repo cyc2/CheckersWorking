@@ -43,7 +43,9 @@ class ViewController: UIViewController {
     @IBOutlet weak var GridLabel59: GridLabel!
     @IBOutlet weak var GridLabel61: GridLabel!
     @IBOutlet weak var GridLabel63: GridLabel!
-    
+    @IBOutlet weak var jumpButton: UIButton!
+    @IBOutlet weak var statusLabel: UILabel!
+    @IBOutlet weak var turnLabel: UILabel!
     
     var squaresArray : [GridLabel]!
     
@@ -61,11 +63,16 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         startingBoard()
         squaresArray = [GridLabel2, GridLabel4, GridLabel6, GridLabel8, GridLabel9, GridLabel11, GridLabel13, GridLabel15, GridLabel18, GridLabel20, GridLabel22, GridLabel24, GridLabel25, GridLabel27, GridLabel29, GridLabel31, GridLabel34, GridLabel36, GridLabel38, GridLabel40, GridLabel41, GridLabel43, GridLabel45, GridLabel47, GridLabel50, GridLabel52, GridLabel54, GridLabel56, GridLabel57, GridLabel59, GridLabel61, GridLabel63]
+        jumpButton.enabled = false
+        statusLabel.text = "Standard"
+        turnLabel.text = "Black's Turn"
     }
     @IBAction func onTappedGridLabel(sender: UITapGestureRecognizer) {
         invalidMove = false
+        statusLabel.text = "Standard"
         openSquareChecker()
         notKingFunction()
+        isKingFunction()
         for label in squaresArray {
             if CGRectContainsPoint(label.frame, sender.locationInView(BackgroundView)) {
                 if blackTurn == true {
@@ -75,6 +82,9 @@ class ViewController: UIViewController {
                             label.moving = true
                             notKingFunction()
                         }
+                    } else if label.destination == true {
+                        resetLabelValues()
+                        break
                     } else if label.openSquare {
                         label.destination = true
                         notKingFunction()
@@ -82,19 +92,17 @@ class ViewController: UIViewController {
                             if label.moving == true {
                                 label.piece = true
                                 moveBlackPieces()
-                                print(blackTurn)
                             }
                         }
                     } else if label.inactive {
                         label.eaten = true
                         if label.eaten == true {
-                            print("eaten is true 1")
+                            //print("eaten is true 1")
                         }
                         for label in squaresArray {
                             if label.moving == true {
                                 label.piece = true
                                 blackPiecesEat()
-                                print(blackTurn)
                             }
                         }
                     }
@@ -105,6 +113,9 @@ class ViewController: UIViewController {
                             label.moving = true
                             notKingFunction()
                         }
+                    } else if label.destination == true {
+                        resetLabelValues()
+                        break
                     } else if label.openSquare {
                         label.destination = true
                         notKingFunction()
@@ -112,19 +123,17 @@ class ViewController: UIViewController {
                             if label.moving == true {
                                 label.piece = true
                                 moveRedPieces()
-                                print(blackTurn)
                             }
                         }
                     } else if label.inactive {
                         label.eaten = true
                         if label.eaten == true {
-                            print("eaten is true 2")
+                            //print("eaten is true 2")
                         }
                         for label in squaresArray {
                             if label.moving == true {
                                 label.piece = true
                                 redPiecesEat()
-                                print(blackTurn)
                             }
                         }
                     }
@@ -237,6 +246,7 @@ class ViewController: UIViewController {
                             label.textColor = UIColor.blackColor()
                             openSquareChecker()
                             blackTurn = !blackTurn
+                            turnLabel.text = "Red's Turn"
                         }
                     }
                 }
@@ -263,6 +273,7 @@ class ViewController: UIViewController {
                             label.textColor = UIColor.redColor()
                             openSquareChecker()
                             blackTurn = !blackTurn
+                            turnLabel.text = "Black's Turn"
                         }
                     }
                 }
@@ -281,6 +292,7 @@ class ViewController: UIViewController {
                         if label.moving == true {
                             label.text = ""
                             label.moving = false
+                            label.jumping = true
                             previousMLabelIndex = mLabelIndex
                             mLabelIndex = squaresArray.indexOf(label)!
                             //print(squaresArray.indexOf(label))
@@ -290,12 +302,17 @@ class ViewController: UIViewController {
                             //print("Test 3")
                         }
                         if label.eaten == true {
-                            label.text = ""
-                            label.textColor = UIColor.blackColor()
                             let labelIndex = squaresArray.indexOf(label)
-                            //print(labelIndex)
                             let label2 = squaresArray[labelIndex! - 4]
                             let label3 = squaresArray[labelIndex! - 5]
+                            /*if label2.text == "•" {
+                                break
+                            }
+                            if label3.text == "•" {
+                                break
+                            }*/
+                            label.text = ""
+                            label.textColor = UIColor.blackColor()
                             print(mLabelIndex)
                             print(labelIndex)
                             if (mLabelIndex - labelIndex! == 3) {
@@ -307,8 +324,8 @@ class ViewController: UIViewController {
                                 label3.textColor = UIColor.blackColor()
                             }
                             openSquareChecker()
-                            blackTurn = !blackTurn
                             //print("Test 4")
+                            multipleJumps()
                             redCheckerCount -= 1
                             checkForWinner()
                             resetGame()
@@ -330,6 +347,7 @@ class ViewController: UIViewController {
                         if label.moving == true {
                             label.text = ""
                             label.moving = false
+                            label.jumping = true
                             mLabelIndex = squaresArray.indexOf(label)!
                             //print("Test 2")
                         } else {
@@ -337,11 +355,17 @@ class ViewController: UIViewController {
                             //print("Test 3")
                         }
                         if label.eaten == true {
-                            label.text = ""
-                            label.textColor = UIColor.redColor()
                             let labelIndex = squaresArray.indexOf(label)
                             let label2 = squaresArray[labelIndex! + 4]
                             let label3 = squaresArray[labelIndex! + 5]
+                            /*if label2.text == "•" {
+                                break
+                            }
+                            if label3.text == "•" {
+                                break
+                            }*/
+                            label.text = ""
+                            label.textColor = UIColor.redColor()
                             print(mLabelIndex)
                             print(labelIndex)
                             if (labelIndex! - mLabelIndex == 3) {
@@ -353,8 +377,8 @@ class ViewController: UIViewController {
                                 label3.textColor = UIColor.redColor()
                             }
                             openSquareChecker()
-                            blackTurn = !blackTurn
                             //print("Test 4")
+                            multipleJumps()
                             blackCheckerCount -= 1
                             checkForWinner()
                             resetGame()
@@ -404,18 +428,51 @@ class ViewController: UIViewController {
             if label.destination == true {
                 dLabelValue = label.tag
             }
+            
+            //print(mLabelValue - 1 != dLabelValue)
+            //print(blackTurn)
+            //print(label.destination)
+            
             if dLabelValue != 10 && mLabelValue != 0 {
-                if (mLabelValue < dLabelValue || mLabelValue - 1 > dLabelValue) && blackTurn == true && label.destination == true {
+                if mLabelValue < dLabelValue && blackTurn == true && label.destination == true {
                     invalidMove = true
-                    print("Invalid")
+                    //print(mLabelValue)
+                    //print(dLabelValue)
+                    //print("Invalid 1")
                 }
-                if (mLabelValue > dLabelValue || mLabelValue + 1 < dLabelValue) && blackTurn == false && label.destination == false {
+                if mLabelValue > dLabelValue && blackTurn == false && label.destination == false {
                     invalidMove = true
-                    print("Invalid")
+                    //print(mLabelValue)
+                    //print(dLabelValue)
+                    //print("Invalid 2")
+                }
+                if  mLabelValue - 1 != dLabelValue && blackTurn == true {
+                    invalidMove = true
+                    //print(mLabelValue)
+                    //print(dLabelValue)
+                    //print("Invalid 3")
+                }
+                if  mLabelValue + 1 != dLabelValue && blackTurn == false {
+                    invalidMove = true
+                    //print(mLabelValue)
+                    //print(dLabelValue)
+                    //print("Invalid 4")
                 }
             }
         }
         return invalidMove
+    }
+    func isKingFunction() {
+        for label in squaresArray {
+            if label.tag == 0 && label.textColor == UIColor.blackColor() {
+                label.king = true
+            } else if label.tag == 7 && label.textColor == UIColor.redColor() {
+                label.king = true
+            }
+            if label.selected == true && label.king == true {
+                statusLabel.text = "King"
+            }
+        }
     }
     func resetLabelValues() {
         for label in squaresArray {
@@ -426,8 +483,21 @@ class ViewController: UIViewController {
             label.destination = false
             label.eaten = false
             label.selected = false
-            label.king = false
+            label.jumping = false
         }
+    }
+    func multipleJumps() {
+        jumpButton.enabled = true
+        
+    }
+    @IBAction func onTappedJumpButton(sender: UIButton) {
+        blackTurn = !blackTurn
+        if blackTurn == true {
+            turnLabel.text = "Black's Turn"
+        } else {
+            turnLabel.text = "Red's Turn"
+        }
+        jumpButton.enabled = false
     }
 }
 

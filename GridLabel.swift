@@ -19,5 +19,6 @@ class GridLabel: UILabel {
     var eatenDestination = false
     var selected = false
     var king = false
+    var jumping = false
     
 }
