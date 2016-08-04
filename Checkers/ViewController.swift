@@ -553,8 +553,12 @@ class ViewController: UIViewController {
             }
             if label.eaten == true {
                 let labelIndex = squaresArray.indexOf(label)
-                let label2 = squaresArray[labelIndex! - 4]
-                let label3 = squaresArray[labelIndex! - 5]
+                var label2 = squaresArray[labelIndex! - 2]
+                var label3 = squaresArray[labelIndex! - 3]
+                if label.tag < 6 || labelIndex == 29 || labelIndex == 30 {
+                    label2 = squaresArray[labelIndex! - 4]
+                    label3 = squaresArray[labelIndex! - 5]
+                }
                 /*if label2.text == "•" {
                  break
                  }
@@ -600,8 +604,12 @@ class ViewController: UIViewController {
             }
             if label.eaten == true {
                 let labelIndex = squaresArray.indexOf(label)
-                let label2 = squaresArray[labelIndex! + 4]
-                let label3 = squaresArray[labelIndex! + 5]
+                var label2 = squaresArray[labelIndex! + 2]
+                var label3 = squaresArray[labelIndex! + 3]
+                if label.tag > 1 || labelIndex == 2 || labelIndex == 3 {
+                    label2 = squaresArray[labelIndex! - 4]
+                    label3 = squaresArray[labelIndex! - 5]
+                }
                 /*if label2.text == "•" {
                  break
                  }
