@@ -1,10 +1,9 @@
-//
 //  ViewController.swift
 //  Checkers
 //
-//  Created by Chris on 7/29/16.
-//  Copyright © 2016 Chris. All rights reserved.
-//
+//  Created by The Checkers Team on 7/29/16.
+//  Copyright © 2016 The Checkers Team. All rights reserved.
+
 
 import UIKit
 
@@ -640,6 +639,23 @@ class ViewController: UIViewController {
             }
         }
         resetLabelValues()
+    }
+    @IBAction func onTappedResetButton(sender: AnyObject) {
+        let alert = UIAlertController(title: "Are you sure you want to reset the game?", message: nil, preferredStyle: .Alert)
+        alert.addAction(UIAlertAction(title: "No", style: .Destructive, handler: nil))
+        alert.addAction(UIAlertAction(title: "Yes", style: .Default, handler: { (action) in
+            self.playerResigned()
+        }))
+        presentViewController(alert, animated: true, completion: nil)
+    }
+    
+    @IBAction func onTappedDrawButton(sender: AnyObject) {
+        let alert = UIAlertController(title: "Are you sure you want to draw?", message: nil, preferredStyle: .Alert)
+        alert.addAction(UIAlertAction(title: "Draw", style: .Default, handler: { (action) in
+            self.playerResigned()
+        }))
+        alert.addAction(UIAlertAction(title: "No", style: .Destructive, handler: nil))
+        presentViewController(alert, animated: true, completion: nil)
     }
 }
 

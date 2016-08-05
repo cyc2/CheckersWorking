@@ -37,13 +37,6 @@
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ekw-oQ-YOz" customClass="GridLabel" customModule="Checkers" customModuleProvider="target">
-                                                <rect key="frame" x="241" y="42" width="40" height="40"/>
-                                                <color key="backgroundColor" red="0.46582532051282055" green="0.46582532051282055" blue="0.46582532051282055" alpha="0.69999999999999996" colorSpace="calibratedRGB"/>
-                                                <fontDescription key="fontDescription" name="GillSans-Light" family="Gill Sans" pointSize="85"/>
-                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5lm-nN-h3b" customClass="GridLabel" customModule="Checkers" customModuleProvider="target">
                                                 <rect key="frame" x="280" y="0.0" width="40" height="40"/>
                                                 <color key="backgroundColor" red="0.46582532051282055" green="0.46582532051282055" blue="0.46582532051282055" alpha="0.69999999999999996" colorSpace="calibratedRGB"/>
@@ -247,6 +240,13 @@
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ekw-oQ-YOz" customClass="GridLabel" customModule="Checkers" customModuleProvider="target">
+                                                <rect key="frame" x="241" y="42" width="40" height="40"/>
+                                                <color key="backgroundColor" red="0.46582532051282055" green="0.46582532051282055" blue="0.46582532051282055" alpha="0.69999999999999996" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" name="GillSans-Light" family="Gill Sans" pointSize="85"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                         </subviews>
                                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.69999999999999996" colorSpace="calibratedRGB"/>
                                         <connections>
@@ -297,8 +297,36 @@
                                     <action selector="onTappedResignButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VMi-3l-8hZ"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bx1-aE-IEa">
+                                <rect key="frame" x="314" y="706" width="100" height="30"/>
+                                <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="15"/>
+                                <state key="normal" title="How to Play"/>
+                                <connections>
+                                    <segue destination="ZaM-1x-Ohv" kind="presentation" id="7RZ-Of-EfJ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ndr-TT-5yJ">
+                                <rect key="frame" x="0.0" y="706" width="75" height="30"/>
+                                <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="15"/>
+                                <state key="normal" title="Reset">
+                                    <color key="titleColor" red="0.52410010288999453" green="0.53909515992595325" blue="1" alpha="0.70123922413793105" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="onTappedResetButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0Cr-Vu-Xq0"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qj3-Ja-MdA">
+                                <rect key="frame" x="83" y="706" width="75" height="30"/>
+                                <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="15"/>
+                                <state key="normal" title="Draw">
+                                    <color key="titleColor" red="0.52410010288999453" green="0.53909515992595325" blue="1" alpha="0.70123922413793105" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="onTappedDrawButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="oRu-G5-UXo"/>
+                                </connections>
+                            </button>
                         </subviews>
-                        <color key="backgroundColor" red="0.70339208704547196" green="0.81846635487059272" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.70746523627701918" green="0.82393161780996038" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <gestureRecognizers/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
@@ -349,6 +377,34 @@
                 </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="212" y="269"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="bkC-Jo-6aE">
+            <objects>
+                <viewController id="ZaM-1x-Ohv" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="QTK-sD-IEX"/>
+                        <viewControllerLayoutGuide type="bottom" id="ADJ-Rd-Z6F"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Oev-zk-TgT">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EgZ-X4-Gft">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                                <color key="backgroundColor" red="0.70746523630000002" green="0.82393161780000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <string key="text">                                 How to Play                                                                       The objective of the game is to capture all of your opponents' pieces out. At the beginning of the game, you start out as either black or red. Black goes first. You capture pieces by "jumping" them, in which the piece that you capture is between your start and end positions for your piece. Each side starts with 12 pieces, which are put on the black squares on the three closest rows on their side. If one player wishes to draw, reset, or resign, they may press the buttons in the game. For the draw button, both players must agree on the draw in order for it to be considered legitimate. If only one player accepted the draw, then the player that accepted the draw is considered to have lost the game. If one of your pieces reaches the other side, it turns into a king and you can then make that piece go backwards. After someone wins, the game will end. Good luck, and have fun!</string>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="15"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mgC-ZS-rKU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="683" y="269"/>
         </scene>
     </scenes>
 </document>
